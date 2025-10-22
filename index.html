@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFE RPOサービス | 獲りに行く採用支援</title>
+    <!-- Chosen Palette: Professional Trust (Light beige/off-white background, deep teal/blue primary, muted orange/gold accent) -->
+    <!-- Application Structure Plan: A single-page, vertical narrative structure designed as a sales funnel (Problem -> Solution -> Process -> Strengths -> Pricing -> CTA). This structure guides the user logically through the service offering, which is more intuitive for a web experience than a linear slide presentation. Key interactions include a tabbed interface for detailed service processes to avoid overwhelming the user with text, and an interactive pricing calculator for engagement and tangible value estimation. -->
+    <!-- Visualization & Content Choices: Problem Section (Goal: Empathize) -> Icon Grid (HTML/Tailwind) for scannability. How It Works (Goal: Explain) -> Tabbed Interface (HTML/Tailwind/JS) to organize dense information user-centrically. Strengths (Goal: Differentiate) -> 3-Column Card Layout (HTML/Tailwind) for clear comparison. Pricing (Goal: Transparency/Engage) -> Interactive Calculator (HTML/JS) to provide a tangible, engaging tool. No charts were used as the source material is qualitative and service-descriptive, lacking quantitative data for visualization. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #FDFBF8;
+            color: #333;
+        }
+        .tab-btn.active {
+            border-color: #0d9488;
+            color: #0d9488;
+            background-color: #ccfbf1;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="bg-teal-800 text-white text-center py-24 px-6">
+        <h1 class="text-4xl md:text-6xl font-black mb-4">広告選定から採用まで、一気通貫アウトソーシング</h1>
+        <p class="text-xl md:text-2xl font-bold text-teal-200">DFE RPOサービスが実現する「獲りに行く採用」</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6 md:p-12">
+
+        <!-- Problem Section -->
+        <section id="problem" class="my-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-teal-900 mb-4">採用に関するこんな課題はありませんか？</h2>
+                <p class="text-lg text-gray-600">多くの中途採用担当者が直面する共通の課題を、DFEが解決します。</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">リソース不足</h3>
+                    <p class="text-gray-700">採用担当者のリソースが足りず、コア業務（最終面接など）に集中できない。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">機会損失</h3>
+                    <p class="text-gray-700">応募者への初動対応が遅れ、貴重な候補者を逃している。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">受動的な採用活動</h3>
+                    <p class="text-gray-700">媒体運用やスカウト送信など、「待ち」の採用から脱却できない。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500">
+                    <h3 class="text-xl font-bold mb-2 text-gray-800">プロセスの属人化</h3>
+                    <p class="text-gray-700">採用プロセスが属人化しており、データに基づいた改善ができていない。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Solution Section -->
+        <section id="solution" class="my-24 bg-teal-50 p-12 rounded-lg text-center">
+             <h2 class="text-4xl font-bold text-teal-900 mb-4">その課題、DFEが「仕組み」で解決します</h2>
+             <p class="text-2xl font-bold text-teal-700 mb-6 max-w-3xl mx-auto">
+                貴社のリソースを「採用判断」というコア業務に集中させます
+             </p>
+             <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                単なる業務代行ではなく、AI技術とBPOの専門知識を活かした「獲りに行く採用プロセス」を構築。リソース不足や機会損失といった課題を根本から解消します。
+             </p>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="process" class="my-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-teal-900 mb-4">サービス提供プロセス</h2>
+                <p class="text-lg text-gray-600">採用戦略から定着支援までを一気通貫でサポートします。タブをクリックして各フェーズの詳細をご覧ください。</p>
+            </div>
+            <div class="flex justify-center border-b mb-8">
+                <button class="tab-btn active text-lg font-bold py-3 px-6 border-b-4 transition" data-tab="tab1">STEP 1: 戦略・集客</button>
+                <button class="tab-btn text-lg font-bold py-3 px-6 border-b-4 border-transparent transition" data-tab="tab2">STEP 2: 選考・動機付け</button>
+                <button class="tab-btn text-lg font-bold py-3 px-6 border-b-4 border-transparent transition" data-tab="tab3">STEP 3: 内定・フォロー</button>
+            </div>
+            <div id="tab-contents" class="bg-white p-8 rounded-lg shadow-inner">
+                <!-- Tab 1: Strategy & Sourcing -->
+                <div id="tab1" class="tab-content active">
+                    <h3 class="text-2xl font-bold text-teal-800 mb-6">多彩なチャネルで候補者との接点を最大化</h3>
+                    <ul class="space-y-4 text-gray-700 list-disc list-inside">
+                        <li><strong class="font-bold">広告媒体の運用:</strong> 有料・無料広告媒体の出稿、更新管理、求人票の最適化で応募率を改善します。</li>
+                        <li><strong class="font-bold">SNSリクルーティング:</strong> 貴社アカウントの更新管理や運用を代行し、新たな候補者層にアプローチします。</li>
+                        <li><strong class="font-bold">エージェント連携・スカウト:</strong> エージェントとの連携、ダイレクトリクルーティング、独自DBを活用したヘッドハンティングで能動的に候補者を探します。</li>
+                    </ul>
+                </div>
+                <!-- Tab 2: Screening & Selection -->
+                <div id="tab2" class="tab-content">
+                    <h3 class="text-2xl font-bold text-teal-800 mb-6">スピーディーかつ丁寧な対応で採用決定率を向上</h3>
+                     <ul class="space-y-4 text-gray-700 list-disc list-inside">
+                        <li><strong class="font-bold">即時初動対応:</strong> 各媒体からのエントリーに対し迅速に対応し、機会損失を防ぎます。</li>
+                        <li><strong class="font-bold">選考プロセス:</strong> 書類選考、合格者への動機付け、オンラインでの一次選考面接までを一貫して実施します。</li>
+                        <li><strong class="font-bold">スコアリング報告:</strong> 一次選考結果を客観的なスコアで報告し、判断基準を明確化します。</li>
+                        <li><strong class="font-bold">データ管理:</strong> 不合格者をリスト化し、貴社の採用データベースを構築します。</li>
+                    </ul>
+                </div>
+                <!-- Tab 3: Offer & Follow-up -->
+                <div id="tab3" class="tab-content">
+                    <h3 class="text-2xl font-bold text-teal-800 mb-6">採用後まで見据えた手厚いサポート</h3>
+                     <ul class="space-y-4 text-gray-700 list-disc list-inside">
+                        <li><strong class="font-bold">選考調整:</strong> 役員・最終面接などの二次選考調整をスムーズに行います。</li>
+                        <li><strong class="font-bold">クロージング:</strong> 選考結果の共有から合格者の入社手続き依頼までをサポートします。</li>
+                        <li><strong class="font-bold">定着支援:</strong> 内定者フォローや入社後のオンボーディング支援も実施し、人材の定着に貢献します。</li>
+                        <li><strong class="font-bold">オプション:</strong> 合同説明会の企画・出稿や当日のブース運営もワンストップで対応可能です。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strengths Section -->
+        <section id="strengths" class="my-24">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-teal-900 mb-4">DFEが選ばれる3つの理由</h2>
+                 <p class="text-lg text-gray-600">私たちの独自性が、貴社の採用を成功に導きます。</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-teal-600 mb-4">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">1. BPO/BPaaSの専門性</h3>
+                    <p class="text-gray-700">AIやシステム化を前提とした「仕組み」で業務を最適化し、単なるマンパワー提供に留まらない価値を提供します。</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-teal-600 mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">2. 「獲りに行く」実行力</h3>
+                    <p class="text-gray-700">媒体運用だけでなく、エージェント連携やヘッドハンティングを駆使し、能動的な採用を実現します。</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-5xl font-black text-teal-600 mb-4">🤝</div>
+                    <h3 class="text-2xl font-bold mb-2 text-gray-800">3. 伴走型パートナー</h3>
+                    <p class="text-gray-700">貴社の社員以上に採用成功にコミットし、本気で伴走するパートナーであり続けます。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="my-16 bg-teal-50 p-12 rounded-lg">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-teal-900 mb-4">成果に連動した料金体系</h2>
+                 <p class="text-lg text-gray-600">プロセスの安定運用と採用成果を両立する、透明性の高い料金プランです。</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
+                <div class="flex-1 bg-white p-8 rounded-lg shadow-md text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">月額基本料</h3>
+                    <p class="text-lg text-gray-700">年間の想定採用人数や業務の規模・範囲に応じて、最適なプランをお見積もりします。</p>
+                </div>
+                <div class="flex-1 bg-white p-8 rounded-lg shadow-md text-center border-2 border-amber-500">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">成功報酬</h3>
+                    <p class="text-5xl font-black text-teal-700">20,000<span class="text-2xl font-bold">円</span></p>
+                    <p class="text-lg text-gray-600">/ 1名当たり</p>
+                    <div class="mt-6">
+                        <label for="hires" class="block text-sm font-medium text-gray-700">採用予定人数で試算:</label>
+                        <input type="number" id="hires" min="1" value="1" class="mt-1 w-32 p-2 border border-gray-300 rounded-md text-center">
+                        <p class="mt-2 text-lg">成功報酬 合計: <span id="total-fee" class="font-bold text-teal-800">20,000円</span></p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 mt-8 text-sm">※求人広告の実費などは別途となります。</p>
+        </section>
+
+    </main>
+    
+    <!-- Footer / CTA -->
+    <footer class="bg-gray-800 text-white py-20 px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">ご相談・お見積もり</h2>
+        <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">まずはお気軽にご状況をお聞かせください。貴社の課題に合わせた最適なプランをご提案します。</p>
+        <a href="https://dfe.jp/business/hr-outsourcing/" target="_blank" rel="noopener noreferrer" class="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-4 px-10 rounded-lg transition text-xl">
+            公式サイトから問い合わせる
+        </a>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.getAttribute('data-tab');
+
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    contents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === target) {
+                            content.classList.add('active');
+                        }
+                    });
+                });
+            });
+
+            const hiresInput = document.getElementById('hires');
+            const totalFeeSpan = document.getElementById('total-fee');
+            const successFee = 20000;
+
+            hiresInput.addEventListener('input', () => {
+                const numberOfHires = parseInt(hiresInput.value) || 0;
+                const totalFee = numberOfHires * successFee;
+                totalFeeSpan.textContent = totalFee.toLocaleString('ja-JP') + '円';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
