@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DFE RPOサービス | 獲りに行く採用支援</title>
     <!-- Chosen Palette: Professional Trust (Light beige/off-white background, deep teal/blue primary, muted orange/gold accent) -->
-    <!-- Application Structure Plan: A single-page, vertical narrative structure designed as a sales funnel (Problem -> Solution -> Process -> Strengths -> Pricing -> CTA). This structure guides the user logically through the service offering, which is more intuitive for a web experience than a linear slide presentation. Key interactions include a tabbed interface for detailed service processes to avoid overwhelming the user with text, and an interactive pricing calculator for engagement and tangible value estimation. -->
-    <!-- Visualization & Content Choices: Problem Section (Goal: Empathize) -> Icon Grid (HTML/Tailwind) for scannability. How It Works (Goal: Explain) -> Tabbed Interface (HTML/Tailwind/JS) to organize dense information user-centrically. Strengths (Goal: Differentiate) -> 3-Column Card Layout (HTML/Tailwind) for clear comparison. Pricing (Goal: Transparency/Engage) -> Interactive Calculator (HTML/JS) to provide a tangible, engaging tool. No charts were used as the source material is qualitative and service-descriptive, lacking quantitative data for visualization. -->
+    <!-- Application Structure Plan: A single-page, vertical narrative structure designed as a sales funnel (Problem -> Solution -> SNS Option -> Process -> Strengths -> Pricing -> CTA). This structure guides the user logically through the service offering. The SNS option is prioritized near the top as requested. Key interactions include a tabbed interface for detailed service processes and an interactive pricing calculator. -->
+    <!-- Visualization & Content Choices: Problem Section (Goal: Empathize) -> Icon Grid (HTML/Tailwind). How It Works (Goal: Explain) -> Tabbed Interface (HTML/Tailwind/JS). SNS Option (Goal: Upsell/Highlight) -> Two-column feature block (HTML/Tailwind). Strengths (Goal: Differentiate) -> 3-Column Card Layout (HTML/Tailwind). Pricing (Goal: Transparency/Engage) -> Interactive Calculator (HTML/JS). No charts used as the source is qualitative. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,9 +34,9 @@
 <body>
 
     <!-- Hero Section -->
-    <header class="bg-teal-800 text-white text-center py-24 px-6">
-        <h1 class="text-4xl md:text-6xl font-black mb-4">広告選定から採用まで、一気通貫アウトソーシング</h1>
-        <p class="text-xl md:text-2xl font-bold text-teal-200">DFE RPOサービスが実現する「獲りに行く採用」</p>
+    <header class="bg-gradient-to-r from-teal-700 via-teal-800 to-gray-900 text-white text-center py-24 px-6">
+        <h1 class="text-4xl md:text-6xl font-black mb-4">広告の選定から採用まで、<br>一気通貫でアウトソーシング</h1>
+        <p class="text-xl md:text-2xl font-bold text-teal-200">DFE RPOサービス（中途採用アウトソーシング）</p>
     </header>
 
     <main class="max-w-5xl mx-auto p-6 md:p-12">
@@ -69,22 +69,67 @@
         
         <!-- Solution Section -->
         <section id="solution" class="my-24 bg-teal-50 p-12 rounded-lg text-center">
-             <h2 class="text-4xl font-bold text-teal-900 mb-4">その課題、DFEが「仕組み」で解決します</h2>
-             <p class="text-2xl font-bold text-teal-700 mb-6 max-w-3xl mx-auto">
-                貴社のリソースを「採用判断」というコア業務に集中させます
-             </p>
+             <h2 class="text-4xl font-bold text-teal-900 mb-4">DFEが「獲りに行く採用担当」として解決します</h2>
              <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                単なる業務代行ではなく、AI技術とBPOの専門知識を活かした「獲りに行く採用プロセス」を構築。リソース不足や機会損失といった課題を根本から解消します。
+                DFEのRPOは単なる業務代行ではありません。AI技術と経験豊富なプロが貴社の採用を最適化し、担当者様が「誰を採用するか」という最重要判断に集中できる環境を構築します。
              </p>
+        </section>
+
+        <!-- SNS Option Section -->
+        <section id="sns-option" class="my-24 bg-gradient-to-r from-purple-50 via-pink-50 to-indigo-50 p-12 rounded-lg shadow-lg">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-purple-900 mb-4">今、最も効果的な一手: SNS採用</h2>
+                 <p class="text-lg text-gray-700">求人広告では伝わらない「リアルな魅力」を届け、採用ブランディングを確立します。</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="text-gray-700 space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">SNSリクルーティングとは？</h3>
+                    <p>
+                        X (旧Twitter)、Instagram、FacebookなどのSNSを活用して採用活動を行うことです。単に求人情報を投稿するだけでなく、企業の日常や社風、働く社員の様子などを発信し、候補者とコミュニケーションを取りながら関係性を築いていく手法です。
+                    </p>
+
+                    <h4 class="text-xl font-bold text-gray-800 pt-4">重要性が高まっている背景</h4>
+                    <ul class="space-y-3 list-disc list-inside">
+                        <li><strong>情報収集方法の変化:</strong> スマートフォンの普及により、求職者（特に若年層）が企業情報を得る手段としてSNSを活用するのが当たり前になっています。</li>
+                        <li><strong>潜在層へのアプローチ:</strong> 従来の求人広告は「今、転職したい」顕在層にしか届きにくい側面がありました。一方SNSは、<strong>まだ転職を具体的に考えていない「潜在層」</strong>にも企業の魅力を日常的に発信でき、将来的な候補者として接点を持てます。</li>
+                        <li><strong>採用ブランディングの必要性:</strong> 労働人口が減少する中、企業は「選ばれる」存在になる必要があります。SNSを通じた継続的な魅力発信は、「この会社で働きたい」と思ってもらうためのブランディングに直結します。</li>
+                    </ul>
+
+                    <h4 class="text-xl font-bold text-gray-800 pt-4">SNSリクルーティングの主なメリット</h4>
+                    <ul class="space-y-3 list-disc list-inside">
+                        <li><strong>企業の「リアル」な姿を伝えられる:</strong> オフィスの雰囲気、社員同士の交流などを写真や動画で見せることができ、候補者は働くイメージを持ちやすくなります。</li>
+                        <li><strong>コスト削減の可能性:</strong> 求人広告媒体への出稿に比べ、SNSアカウントの運用自体は無料または低コストで始められます。</li>
+                        <li><strong>候補者との直接的なコミュニケーション:</strong> DMやコメント欄を通じて、候補者と気軽に、かつ迅速にコミュニケーションを取ることが可能です。</li>
+                        <li><strong>入社後のミスマッチ低減:</strong> 企業のありのままの姿を発信することで、相互理解が深まり、入社後のミスマッチを防ぐ効果が期待できます。</li>
+                        <li><strong>リファラル採用（紹介）の促進:</strong> 社員が自社の投稿をシェアすることで、その社員の友人・知人といった層にも情報が届きやすくなります。</li>
+                    </ul>
+                    
+                    <h4 class="text-xl font-bold text-gray-800 pt-4">運用のポイント・注意点</h4>
+                    <p>
+                        ただし、SNSリクルーティングは「始めてすぐに成果が出る」ものではありません。継続的な発信が不可欠です。また、不適切な発言は炎上リスクもあるため、運用ルールを慎重に決め、守らねばなりません。
+                    </p>
+
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-xl border-t-4 border-pink-500 sticky top-12">
+                    <h2 class="text-2xl font-bold text-purple-800 mb-4">特別オプション: Instagram SNSリクルーティング</h2>
+                    <p class="text-lg text-gray-700 mb-6">企画から採用専用アカウントの運営まで、SNSリクルーティングをワンストップで代行します。</p>
+                    <div class="text-left">
+                        <p class="text-3xl font-black text-purple-700 mb-4">月額 100,000<span class="text-xl font-bold">円</span></p>
+                        <p class="text-sm text-gray-600 mb-4">（1年ごとの契約更新）</p>
+                        <p class="font-bold text-gray-800 flex items-center mb-2">📸 <span class="ml-2">採用ブランディングの構築</span></p>
+                        <p class="font-bold text-gray-800 flex items-center">🗣️ <span class="ml-2">企画・投稿・運用代行すべて込み</span></p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- How It Works Section -->
         <section id="process" class="my-16">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-teal-900 mb-4">サービス提供プロセス</h2>
+                <h2 class="text-4xl font-bold text-teal-900 mb-4">RPOサービス提供プロセス</h2>
                 <p class="text-lg text-gray-600">採用戦略から定着支援までを一気通貫でサポートします。タブをクリックして各フェーズの詳細をご覧ください。</p>
             </div>
-            <div class="flex justify-center border-b mb-8">
+            <div class="flex flex-col sm:flex-row justify-center border-b mb-8">
                 <button class="tab-btn active text-lg font-bold py-3 px-6 border-b-4 transition" data-tab="tab1">STEP 1: 戦略・集客</button>
                 <button class="tab-btn text-lg font-bold py-3 px-6 border-b-4 border-transparent transition" data-tab="tab2">STEP 2: 選考・動機付け</button>
                 <button class="tab-btn text-lg font-bold py-3 px-6 border-b-4 border-transparent transition" data-tab="tab3">STEP 3: 内定・フォロー</button>
@@ -130,17 +175,17 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8 text-center">
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-5xl font-black text-teal-600 mb-4">⚙️</div>
+                    <div class="text-5xl mb-4">⚙️</div>
                     <h3 class="text-2xl font-bold mb-2 text-gray-800">1. BPO/BPaaSの専門性</h3>
                     <p class="text-gray-700">AIやシステム化を前提とした「仕組み」で業務を最適化し、単なるマンパワー提供に留まらない価値を提供します。</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-5xl font-black text-teal-600 mb-4">🚀</div>
+                    <div class="text-5xl mb-4">🎯</div>
                     <h3 class="text-2xl font-bold mb-2 text-gray-800">2. 「獲りに行く」実行力</h3>
                     <p class="text-gray-700">媒体運用だけでなく、エージェント連携やヘッドハンティングを駆使し、能動的な採用を実現します。</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <div class="text-5xl font-black text-teal-600 mb-4">🤝</div>
+                    <div class="text-5xl mb-4">🤝</div>
                     <h3 class="text-2xl font-bold mb-2 text-gray-800">3. 伴走型パートナー</h3>
                     <p class="text-gray-700">貴社の社員以上に採用成功にコミットし、本気で伴走するパートナーであり続けます。</p>
                 </div>
@@ -170,6 +215,7 @@
                 </div>
             </div>
             <p class="text-center text-gray-500 mt-8 text-sm">※求人広告の実費などは別途となります。</p>
+            <p class="text-center text-gray-500 mt-2 text-sm font-bold">※本ページに記載の金額は全て消費税別です。</p>
         </section>
 
     </main>
@@ -208,15 +254,17 @@
             const totalFeeSpan = document.getElementById('total-fee');
             const successFee = 20000;
 
-            hiresInput.addEventListener('input', () => {
-                const numberOfHires = parseInt(hiresInput.value) || 0;
-                const totalFee = numberOfHires * successFee;
-                totalFeeSpan.textContent = totalFee.toLocaleString('ja-JP') + '円';
-            });
+            if (hiresInput) {
+                hiresInput.addEventListener('input', () => {
+                    const numberOfHires = parseInt(hiresInput.value) || 0;
+                    const totalFee = numberOfHires * successFee;
+                    if (totalFeeSpan) {
+                        totalFeeSpan.textContent = totalFee.toLocaleString('ja-JP') + '円';
+                    }
+                });
+            }
         });
     </script>
 </body>
 </html>
-
-
 
